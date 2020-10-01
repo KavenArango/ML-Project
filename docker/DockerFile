@@ -1,6 +1,10 @@
 FROM node:12
 
+ENV NODE_ENV=production
+
 WORKDIR /app
+
+RUN apt-get update || : && apt-get install python -y
 
 COPY package*.json ./
 
@@ -12,4 +16,4 @@ ENV PORT=8080
 
 EXPOSE 8080
 
-CMD ["npm", "start"]
+CMD [ "npm", "start" ]

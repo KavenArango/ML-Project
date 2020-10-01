@@ -1,0 +1,9 @@
+version: '3'
+services:
+  folder:
+    image: node:12
+    build: ./folder/docker
+    volumes:
+      - ./Electron:/usr/src/app
+    ports:
+      - 5001:80
