@@ -5,7 +5,7 @@ Project for machine learning class to help teach students about the priciples of
 
 # Build VENV
 * pip install venv
-*  venv/bin/activate
+*  .\venv\Scripts\activate
 * pip install -r requirements. txt
 
 # Run electron
