@@ -3,33 +3,34 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css">
   </head>
   <body>
     <h1>💖 Hello World!</h1>
     <p>Welcome yyyffyy to your Electron application.</p>
-
-    <script src="./renderer.js"></script>
-  </body>
-</html> -->
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Calling Python from Electron!</title>
-</head>
-
-<body>
-    <h1>Simple Python Calculator!</h1>
-    <p>Input something like <code>1 + 1</code>.</p>
-    <input id="input" value="1 + 1"></input>
-    <input id="btn" type="button" value="Send to Python!"></input>
-    </br>
-    Got <span id="result"></span>
     
     <script src="./renderer.js"></script>
+  </body>
+  </html> -->
+  
+  
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Calling Python from Electron!</title>
+      <link rel="stylesheet" href="index.css">
+      
+    </head>
 
-</body>
+  <body>
+    <h1>Testing Python</h1>
+    
+    <button id="python" class="btn" value="python" onclick="sendToPython()">
+    
+    </br>
+    <span id="result"></span>
+    
+    <script src="./renderer.js"></script>
+    
+  </body>
 </html>

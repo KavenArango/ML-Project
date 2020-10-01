@@ -1,3 +1,7 @@
+
+# Virtual evn
+venv
+.venv
 # Logs
 logs
 *.log

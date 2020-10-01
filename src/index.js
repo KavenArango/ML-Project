@@ -8,17 +8,20 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 
 const createWindow = () => {
   // Create the browser window.
-  
+
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    webPreferences: {
+      nodeIntegration: true
+    }
   });
-  
+
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
   // Open the DevTools.
-  //mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
@@ -36,7 +39,7 @@ app.on('window-all-closed', () => {
 });
 
 
-app.on('browser-window-created',function(e,window) {
+app.on('browser-window-created', function (e, window) {
   window.setMenu(null);
 });
 
