@@ -3,7 +3,7 @@ from sys import argv
 def calc():
 	"""based on the input text, return the operation result"""
 	try:
-		return "Hello"
+		return "why am i here"
 	except Exception as e:
 		print(e)
 		return "goodbye"
