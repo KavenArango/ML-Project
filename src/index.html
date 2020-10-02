@@ -11,26 +11,88 @@
     <script src="./renderer.js"></script>
   </body>
   </html> -->
-  
-  
-  <!DOCTYPE html>
-  <html>
-    <head>
-      <meta charset="UTF-8">
-      <title>Calling Python from Electron!</title>
-      <link rel="stylesheet" href="index.css">
-      
-    </head>
 
-  <body>
-    <h1>Testing Python</h1>
-    
-    <button id="python" class="btn" value="python" onclick="sendToPython()">
-    
-    </br>
-    <span id="result"></span>
-    
-    <script src="./renderer.js"></script>
-    
-  </body>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+  <!-- <link rel="stylesheet" href="/src/index.css" -->
+  <h1>Welcome to Machine Learning</h1>
+</head>
+
+<body>
+
+
+  <button id="basicPythonbtn" class="btn">
+    <div class="card">
+      <div class="images">
+        <img src="../Images/PythonLogo.jpg" style="height: 50px; width: 50px;" >
+      </div>
+      <div class="container">
+        <h4><b>The basics</b></h4> <br>
+        <p>Python Programming</p>
+        <p>Statistics and probability</p>
+        <p>SQL through python</p>
+        <p>Hypothesis testing</p>
+      </div>
+    </div>
+  </button>
+
+
+
+  <button id="supLearningbtn" class="btn">
+    <div class="card">
+      <div class="images">
+        <img src="../Images/supervisedLearning.jpg" style="height: 75px; width: 75px;" >
+      </div>
+      <div class="container">
+        <h4><b>Supervised Learning</b></h4> <br>
+        <p>Regression</p>
+        <p>Classification</p
+      </div>
+    </div>
+  </button>
+  
+  
+
+  <button id="unsupLearningbtn" class="btn">
+    <div class="card">
+      <div class="images">
+        <img src="../Images/un-supLearning.png" style="height: 100px; width: 100px;">
+      </div>
+      <div class="container">
+        <h4><b>Un-Supervised Learning</b></h4> <br>
+        <p>K-mean clustering</p>
+        <p>K-Nearest Neighbor</p>
+      </div>
+    </div>
+  </button>
+
+
+  <button id="advancedbtn" class="btn">
+    <div class="card">
+      <div class="images">
+        <img src="../Images/K-mean.png" style="height: 125px; width: 125px;" >
+      </div>
+      <div class="container">
+        <h4><b>The Advanced Stuff</b></h4><br>
+        <p>Python Programming</p>
+        <p>Statistics and probability</p>
+        <p>SQL through python</p>
+        <p>Hypothesis testing</p>
+      </div>
+    </div>
+  </button>
+
+
+  <button id="makevenv">ReMake python envirement
+  </button>
+  <script defer src="./renderer.js"></script>
+
+</body>
+
 </html>

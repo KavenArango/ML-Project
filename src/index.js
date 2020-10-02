@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
+var pyshell = require('python-shell');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
@@ -12,6 +13,8 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    minWidth: 400,
+    minHeight: 100,
     webPreferences: {
       nodeIntegration: true
     }
@@ -53,3 +56,18 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+const { exec } = require('child_process');
+exec('virtualenv Evenv && .\\Evenv\\Scripts\\activate && pip install -r requirements.txt', (err, stdout, stderr) => {
+  if (err) {
+    return err;
+  }
+
+  console.log(`stdout: ${stdout}`);
+});
+
+exec('.\\Python\\mkvenv.py',  (err, stdout, stderr) => {
+  if (err) {
+    return err;
+  }
+  console.log(`stdout: ${stdout}`);;
+});
