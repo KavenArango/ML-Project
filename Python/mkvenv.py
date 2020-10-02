@@ -1,10 +1,13 @@
+from sys import argv
+
 def calc():
-    try:
-        return ("HELLO")
-    except Exception as e:
-        return ("Failed to create venv", e)
-    
-    
+	"""based on the input text, return the operation result"""
+	try:
+		return "Hello"
+	except Exception as e:
+		print(e)
+		return "goodbye"
+
 if __name__ == '__main__':
     print(calc())
 
