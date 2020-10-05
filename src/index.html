@@ -15,91 +15,46 @@
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" /> -->
+  </head>
+  <link rel="stylesheet" href="HoverCard.css">
+  <h1 class="title">Welcome to Machine Learning</h1>
 
-<head>
-  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Machine Learning</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
-  <!-- <link rel="stylesheet" href="/src/index.css" -->
-  <h1>Welcome to Machine Learning</h1>
-</head>
+  <div id="app" class="container">
+    
+    <card data-image="../Images/PythonLogo.jpg">
+      <h1 slot="header">The Basics</h1>
+      <p slot="content">Python Programming<br>Statistics and probability <br>SQL through python <br>Hypothesis testing</p>
+    </card>
+
+    <card data-image="../Images/supervisedLearning.jpg">
+      <h1 slot="header">Supervised Learning</h1>
+      <p slot="content">Regression<br>Classification</p>
+    </card>
+
+    <card data-image="../Images/un-supLearning.png">
+      <h1 slot="header">Unsupervised Learning</h1>
+      <p slot="content">K-mean clustering<br>K-Nearest Neighbor</p>
+    </card>
+
+    <card data-image="../Images/K-mean.png">
+      <h1 slot="header">Advanced Topics</h1>
+      <p slot="content">Python Programming<br>Statistics and probability<br>SQL through python<br>Hypothesis testing</p>
+    </card>
+  </div> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+  <script defer src="./HoverCard.js"></script>
+
 
 <body>
 
+    <button id="makevenv">Build Python Environment
+    </button>
+    <script defer src="./renderer.js"></script>
 
-  <div id="app" class="container">
-    <card data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
-      <h1 slot="header">Canyons</h1>
-      <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    </card>
-  </div>
-
-  <button id="basicPythonbtn" class="btn">
-    <div class="card">
-      <div class="images">
-        <img src="../Images/PythonLogo.jpg" style="height: 50px; width: 50px;" >
-      </div>
-      <div class="container">
-        <h4><b>The basics</b></h4> <br>
-        <p>Python Programming</p>
-        <p>Statistics and probability</p>
-        <p>SQL through python</p>
-        <p>Hypothesis testing</p>
-      </div>
-    </div>
-  </button>
-
-
-
-  <button id="supLearningbtn" class="btn">
-    <div class="card">
-      <div class="images">
-        <img src="../Images/supervisedLearning.jpg" style="height: 75px; width: 75px;" >
-      </div>
-      <div class="container">
-        <h4><b>Supervised Learning</b></h4> <br>
-        <p>Regression</p>
-        <p>Classification</p
-      </div>
-    </div>
-  </button>
-  
-  
-
-  <button id="unsupLearningbtn" class="btn">
-    <div class="card">
-      <div class="images">
-        <img src="../Images/un-supLearning.png" style="height: 100px; width: 100px;">
-      </div>
-      <div class="container">
-        <h4><b>Un-Supervised Learning</b></h4> <br>
-        <p>K-mean clustering</p>
-        <p>K-Nearest Neighbor</p>
-      </div>
-    </div>
-  </button>
-  
-
-  <button id="advancedbtn" class="btn">
-    <div class="card">
-      <div class="images">
-        <img src="../Images/K-mean.png" style="height: 125px; width: 125px;" >
-      </div>
-      <div class="container">
-        <h4><b>The Advanced Stuff</b></h4><br>
-        <p>Python Programming</p>
-        <p>Statistics and probability</p>
-        <p>SQL through python</p>
-        <p>Hypothesis testing</p>
-      </div>
-    </div>
-  </button>
-
-
-  <button id="makevenv">python envirement
-  </button>
-  <script defer src="./renderer.js"></script>
-
-</body>
+  </body>
+</div>
 
 </html>
