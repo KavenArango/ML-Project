@@ -30,8 +30,8 @@ Vue.component('card', {
   props: ['dataImage'],
   data: () => ({
     
-    width: 240,
-    height: 320,
+    width: 0,
+    height: 0,
     mouseX: 0,
     mouseY: 0,
     mouseLeaveDelay: null
@@ -66,8 +66,8 @@ Vue.component('card', {
   methods: {
     handleMouseMove(e) {
       //TODO This is still very broken
-      this.mouseX = e.pageX - 2 - this.width/2; //this.$refs.card.offsetLeft
-      this.mouseY = e.pageY -  2 - this.height/2; //this.$refs.card.offsetTop
+      this.mouseX = e.pageX - 0 - this.width/2; //this.$refs.card.offsetLeft
+      this.mouseY = e.pageY -  0 - this.height/2; //this.$refs.card.offsetTop
     },
     handleMouseEnter() {
       console.log(this.$refs.card);
