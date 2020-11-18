@@ -7,7 +7,6 @@ Project for machine learning class to help teach students about the priciples of
 * pip install venv
 *  .\venv\Scripts\activate
 * pip install -r requirements. txt
-
 # Run electron
 * npm start
 * RS to restart app

@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "c:\\Users\\Puffy\\OneDrive - SNHU\\Code\\Python\\mlproject\\venv\\Scripts\\python.exe",
+    "python.pythonPath": "Evenv\\Scripts\\python.exe",
     "python.formatting.provider": "autopep8"
 }
