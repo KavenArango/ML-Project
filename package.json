@@ -47,6 +47,7 @@
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
     "python-shell": "^2.0.2",
+    "tree-kill": "^1.2.2",
     "vue": "^2.6.12",
     "vue.js": "^0.3.2"
   },
