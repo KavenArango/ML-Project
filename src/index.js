@@ -2,6 +2,37 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 var pyshell = require('python-shell');
 
+
+// TODO MAKE INSTALLER FILE
+// virtualenv Evenv  && pip3 install -r requirements.txt && 
+
+async function asyncCall() {
+  const { exec } = require('child_process');
+  console.log("RUNNING PYTHTHON VENV")
+  exec(' .\\Evenv\\Scripts\\activate && jupyter notebook', (err, stdout, stderr) => {
+    if (err) {
+      return err;
+    }
+    console.log('start script')
+    console.log(`stdout: ${stdout}`);
+  });
+
+
+
+  exec('.\\Python\\mkvenv.py', (err, stdout, stderr) => {
+    if (err) {
+      return err;
+    }
+    console.log(`stdout: ${stdout}`);;
+  });
+}
+
+asyncCall();
+
+
+
+
+
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
   app.quit();
@@ -37,6 +68,8 @@ app.on('ready', createWindow);
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
+    console.log("CLOSE ELECTRON")
+    pyshell.kill();
     app.quit();
   }
 });
@@ -56,19 +89,3 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
-const { exec } = require('child_process');
-console.log("RUNNING PYTHTHON VENV")
-exec('virtualenv Evenv && .\\Evenv\\Scripts\\activate && pip install -r requirements.txt', (err, stdout, stderr) => {
-  if (err) {
-    return err;
-  }
-  console.log(`stdout: ${stdout}`);
-});
-
-
-exec('.\\Python\\mkvenv.py', (err, stdout, stderr) => {
-  if (err) {
-    return err;
-  }
-  console.log(`stdout: ${stdout}`);;
-});
