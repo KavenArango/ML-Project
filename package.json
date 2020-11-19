@@ -45,8 +45,8 @@
     }
   },
   "dependencies": {
+    "electron": "10.1.3",
     "electron-squirrel-startup": "^1.0.0",
-    "python-shell": "^2.0.2",
     "tree-kill": "^1.2.2",
     "vue": "^2.6.12",
     "vue.js": "^0.3.2"
@@ -60,6 +60,6 @@
     "electron": "10.1.3",
     "electron-packager": "^15.1.0",
     "mysql": "2.18.1",
-    "python-shell": "2.0.2"
+    "python-shell": "^2.0.2"
   }
 }
