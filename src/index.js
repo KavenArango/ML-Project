@@ -6,28 +6,24 @@ var pyshell = require('python-shell');
 // TODO MAKE INSTALLER FILE
 // virtualenv Evenv  && pip3 install -r requirements.txt && 
 
-async function asyncCall() {
-  const { exec } = require('child_process');
-  console.log("RUNNING PYTHTHON VENV")
-  exec(' .\\Evenv\\Scripts\\activate && jupyter notebook', (err, stdout, stderr) => {
-    if (err) {
-      return err;
-    }
-    console.log('start script')
-    console.log(`stdout: ${stdout}`);
-  });
+
+const { exec } = require('child_process');
+exec(' .\\Evenv\\Scripts\\activate && cd .\\JNotebook\\ && jupyter notebook', (err, stdout, stderr) => {
+  if (err) {
+    return err;
+  }
+  console.log(`stdout: ${stdout}`);
+});
 
 
 
-  exec('.\\Python\\mkvenv.py', (err, stdout, stderr) => {
-    if (err) {
-      return err;
-    }
-    console.log(`stdout: ${stdout}`);;
-  });
-}
+exec('.\\Python\\mkvenv.py', (err, stdout, stderr) => {
+  if (err) {
+    return err;
+  }
+  console.log(`stdout: ${stdout}`);;
+});
 
-asyncCall();
 
 
 
@@ -66,11 +62,19 @@ app.on('ready', createWindow);
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
+var kill = require('tree-kill');
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     console.log("CLOSE ELECTRON")
-    pyshell.kill();
-    app.quit();
+
+    exec('deactivate', (err, stdout, stderr) => {
+      if (err) {
+        return err;
+      }
+      console.log('stopped')
+      console.log(`stdout: ${stdout}`);
+      app.quit();
+    });
   }
 });
 
